@@ -22,11 +22,17 @@ console.log("ExchangeRateTable props", props)
             )}
             {props.exchangeRateData && !props.isLoading && (
                 <div>
-                    <ExchangeRatePrimary rates = {props.exchangeRateData.rates} amount={props.amount} firstCurrency={props.firstCurrency} secondCurrency={props.secondCurrency}/>
+                    <ExchangeRatePrimary error={props.error} rates={props.exchangeRateData.rates} amount={props.amount} firstCurrency={props.firstCurrency} secondCurrency={props.secondCurrency}/>
                     {/* <h3>Base Currency: {props.exchangeRateData.base}</h3> */}
                     <hr></hr>
                     <h3>Today's Date: {props.exchangeRateData.date}</h3>
                     <Rates rates = {props.exchangeRateData.rates} amount={props.amount}/>
+                </div>
+            )}
+            {!props.exchangeRateData && props.error && (
+                <div>
+                    <h3>Currency not recognize, please check and try again.</h3>
+                    <h3>{props.error}</h3>
                 </div>
             )}
         </div>

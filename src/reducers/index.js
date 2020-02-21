@@ -1,8 +1,8 @@
 const initialState = {
     isLoading: false,
-    exchangeRateData: null,
+    exchangeRateData: '',
     error: '',
-    amount: null,
+    amount: '',
     firstCurrency: '',
     secondCurrency: ''
 };
@@ -20,12 +20,12 @@ export const reducer = (state = initialState, action) => {
                 isLoading: false,
                 exchangeRateData: action.payload
             }
-        // case'FETCH_DATA_FAILED':
-        //     return{
-        //         ...state,
-        //         isLoading: false,
-        //         error: action.payload
-        //     }
+        case'FETCH_DATA_FAILED':
+            return{
+                ...state,
+                isLoading: false,
+                error: action.payload
+            }
         case 'ADD_AMOUNT':
             return{
                 ...state,

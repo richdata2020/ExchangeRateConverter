@@ -12,6 +12,7 @@ export const fetchExchangeRate = currency =>{
         .catch(err => {
             console.log(err)
             alert('Currency not recognize, please check and try again.')
+            dispatch({type: 'FETCH_DATA_FAILED', payload: err.message})
         })
     }
 }
