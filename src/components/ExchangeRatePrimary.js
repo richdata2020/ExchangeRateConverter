@@ -4,26 +4,29 @@ import './ExchangeRatePrimary.scss'
 export const ExchangeRatePrimary = props => {
     console.log("ExchangeRatePrimary props", props)
 
-    let rates = props.rates; 
-
-    let result = Object.keys(rates).map(key =>{
-        return [key, rates[key]];
-    })
-
-    let secondCurrency = props.secondCurrency.toUpperCase();
-   
-    let found = [];
+    let rates = {};
+    let result, secondCurrency, found = [];
     let foundResult = false;
-    for (let i = 0; i < result.length; i++)
-    {
-        if (secondCurrency === result[i][0])
-        {
-            found = result[i];
-            foundResult = true;
-        }
-    }
-    console.log("ExchangeRatePrimary FOUND", found)
 
+    if (props.error !== "")
+    {
+        rates = props.rates; 
+        result = Object.keys(rates).map(key =>{
+            return [key, rates[key]];
+        })
+        secondCurrency = props.secondCurrency.toUpperCase();
+
+        for (let i = 0; i < result.length; i++)
+        {
+            if (secondCurrency === result[i][0])
+            {
+                found = result[i];
+                foundResult = true;
+            }
+        }
+        console.log("ExchangeRatePrimary FOUND", found)
+    }
+   
     return(
        
         <div>
