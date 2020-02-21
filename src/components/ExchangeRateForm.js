@@ -29,7 +29,7 @@ export const ExchangeRateForm = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        movingElements();
+        // movingElements();
         props.fetchExchangeRate(currency.firstCurrency);
         props.addAmount(currency.amount);
         props.firstCurrency(currency.firstCurrency);
