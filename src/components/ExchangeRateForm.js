@@ -15,7 +15,7 @@ export const ExchangeRateForm = props => {
 
     const movingElements = () => {
              let formPanel = document.getElementsByClassName("exchangeRateInputPanel");
-             formPanel[0].setAttribute('style','position: relative; transform: translate(-50%, 1%);');
+             formPanel[0].setAttribute('style','position: relative; transform: translate(-50%, 5%)');
              let footer = document.getElementById('footer');
              footer.style.position="relative";
          }
