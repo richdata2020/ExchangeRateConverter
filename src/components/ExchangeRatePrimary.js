@@ -37,7 +37,7 @@ export const ExchangeRatePrimary = props => {
 
             {foundResult && (
             <div className="primary">
-                <h2>{props.amount} {props.firstCurrency.toUpperCase()} = {(found[1] * props.amount).toFixed(6)} {found[0]}</h2>
+                <h2>{props.amount} <span className="warningMessage">{props.firstCurrency.toUpperCase()}</span> = {(found[1] * props.amount).toFixed(6)} <span className="warningMessage">{found[0]}</span></h2>
                 <h3>1 {props.firstCurrency.toUpperCase()} = {(found[1]).toFixed(6)} {found[0]}</h3>
                 <h3>1 {found[0]} = {(1/(found[1])).toFixed(6)} {props.firstCurrency.toUpperCase()}</h3>
             </div>

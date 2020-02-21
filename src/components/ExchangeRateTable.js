@@ -27,6 +27,7 @@ console.log("ExchangeRateTable props", props)
                     <hr></hr>
                     <h3>Today's Date: {props.exchangeRateData.date}</h3>
                     <Rates rates = {props.exchangeRateData.rates} amount={props.amount}/>
+                    <p className="reference">Above currency rates serve as a reference only.</p>
                 </div>
             )}
             {!props.exchangeRateData && props.error && (
