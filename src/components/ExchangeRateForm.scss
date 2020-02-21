@@ -6,10 +6,18 @@
     border-radius: 8px;
     box-shadow: 0 5px 7px -2px #000;
     width: 48vw;
-    margin: 0 auto;
-    margin-top: 5%;
     padding: 1vw;
     background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
 
 
     // Tablets and phone view - Other
