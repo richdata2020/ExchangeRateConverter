@@ -15,7 +15,7 @@ export const ExchangeRateForm = props => {
 
     const movingElements = () => {
              let formPanel = document.getElementsByClassName("app-container");
-             formPanel[0].style.justifyContent = "space-between";
+             formPanel[0].style.marginTop = "5vh";
              let footer = document.getElementById('footer');
              footer.style.position="relative";
          }
@@ -29,7 +29,7 @@ export const ExchangeRateForm = props => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        // movingElements();
+        movingElements();
         props.fetchExchangeRate(currency.firstCurrency);
         props.addAmount(currency.amount);
         props.firstCurrency(currency.firstCurrency);
