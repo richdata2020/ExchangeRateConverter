@@ -20,7 +20,7 @@ console.log("ExchangeRateTable props", props)
                 timeout={3000} //3 secs
              />
             )}
-            {props.exchangeRateData && !props.isLoading && (
+            {props.exchangeRateData && !props.isLoading && (props.error ==="") && (
                 <div>
                     <ExchangeRatePrimary error={props.error} rates={props.exchangeRateData.rates} amount={props.amount} firstCurrency={props.firstCurrency} secondCurrency={props.secondCurrency}/>
                     {/* <h3>Base Currency: {props.exchangeRateData.base}</h3> */}
@@ -30,7 +30,7 @@ console.log("ExchangeRateTable props", props)
                     <p className="reference">Above currency rates serve as a reference only.</p>
                 </div>
             )}
-            {!props.exchangeRateData && props.error && (
+            {(props.error !=="") && (
                 <div>
                     <h3>Currency not recognize, please check and try again.</h3>
                     <h3>{props.error}</h3>
