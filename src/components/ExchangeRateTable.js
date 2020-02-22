@@ -20,7 +20,7 @@ console.log("ExchangeRateTable props", props)
                 timeout={3000} //3 secs
              />
             )}
-            {props.exchangeRateData && !props.isLoading && (props.error ==="") && (
+            {props.exchangeRateData && (props.error ==="") && (
                 <div>
                     <ExchangeRatePrimary error={props.error} rates={props.exchangeRateData.rates} amount={props.amount} firstCurrency={props.firstCurrency} secondCurrency={props.secondCurrency}/>
                     {/* <h3>Base Currency: {props.exchangeRateData.base}</h3> */}
