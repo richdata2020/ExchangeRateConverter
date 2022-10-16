@@ -8,7 +8,7 @@ function App() {
     <div className="app-container">
       <ExchangeRateForm />
       <ExchangeRateTable />
-      <footer id="footer">Designed by Richard Wang 2020</footer>
+      <footer id="footer">RW-LL-RH Beta 2022</footer>
     </div>
   );
 }
