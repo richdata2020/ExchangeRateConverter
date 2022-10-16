@@ -8,7 +8,7 @@ function App() {
     <div className="app-container">
       <ExchangeRateForm />
       <ExchangeRateTable />
-      <footer id="footer">For test purposes only - MHS v1.6 2022</footer>
+      <footer id="footer">For test purposes only - MHS(RW-LL-RH) v1.6 2022</footer>
     </div>
   );
 }
